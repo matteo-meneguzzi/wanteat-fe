@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "./Logo";
-import UserDropdown from "./UserDropdown";
+import UserMenu from "./UserMenu";
 import MenuIcon from "./icons/MenuIcon";
 import NotificationIcon from "./icons/NotificationIcon";
 import LgNavBar from "./navbar/LgNavBar";
@@ -36,7 +36,7 @@ export default function Header() {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <NotificationIcon />
-            <UserDropdown
+            <UserMenu
               isUserMenuOpen={isUserMenuOpen}
               setIsUserMenuOpen={setIsUserMenuOpen}
               userMenuRef={userMenuRef}

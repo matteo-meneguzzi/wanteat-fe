@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import Header from "@/components/header/Header";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +16,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  //const pathname = usePathname();
-
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
+      <UserProvider>
+        <body className={inter.className}>
+          <Header />
+          {children}
+        </body>
+      </UserProvider>
     </html>
   );
 }
