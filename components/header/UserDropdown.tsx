@@ -35,22 +35,13 @@ export default function UserDropdown({
       >
         {/* Active: "bg-gray-100", Not Active: "" -- */}
         <a
-          href="#"
+          href="/user_info"
           className="block px-4 py-2 text-sm text-gray-700"
           role="menuitem"
           tabIndex={-1}
           id="user-menu-item-0"
         >
           Your Profile
-        </a>
-        <a
-          href="#"
-          className="block px-4 py-2 text-sm text-gray-700"
-          role="menuitem"
-          tabIndex={-1}
-          id="user-menu-item-1"
-        >
-          Settings
         </a>
         <a
           href="/api/auth/logout"
